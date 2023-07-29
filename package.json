@@ -1,0 +1,35 @@
+{
+  "name": "telegraf-openapi-bot",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "lint": "eslint . --cache",
+    "lint:errors": "yarn lint -quiet",
+    "lint:fix": "yarn lint --fix",
+    "npx:sort-package-json": "npx --yes sort-package-json",
+    "prettier": "yarn prettier:javascript && yarn prettier:typescript && yarn prettier:json && yarn prettier:markdown && yarn prettier:yaml",
+    "prettier:javascript": "prettier --no-error-on-unmatched-pattern --parser --write \"**/*.{js,jsx}\"",
+    "prettier:json": "prettier --no-error-on-unmatched-pattern --parser json --write \"**/*.json\"",
+    "prettier:markdown": "prettier --no-error-on-unmatched-pattern --parser markdown --write \"**/*.md\"",
+    "prettier:typescript": "prettier --no-error-on-unmatched-pattern --parser typescript --write \"**/*.{ts,tsx}\"",
+    "prettier:yaml": "prettier --no-error-on-unmatched-pattern --parser yaml --write \"**/*.{yml,yaml}\""
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^3.3.0",
+    "telegraf": "^4.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "eslint": "8.44.0",
+    "eslint-kit": "^10.4.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
